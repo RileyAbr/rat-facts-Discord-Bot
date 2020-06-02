@@ -46,10 +46,13 @@ bot.on("messageCreate", async (msg) => {
     .split(" ")
     .map((s) => s.trim())
     .filter((s) => s);
-  if (parts[1] === undefined) {
-    const commandName = "";
+
+  let commandName = "";
+
+  if (parts[1] == null) {
+    commandName = "";
   } else {
-    const commandName = parts[1];
+    commandName = parts[1];
   }
 
   // Get the appropriate handler for the command, if there is one.
