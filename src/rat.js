@@ -22,6 +22,9 @@ bot.on("ready", () => {
 
 // Handles all commands sent to the bot
 bot.on("message", (msg) => {
+    // Ignore message if from self
+    if (msg.author.bot) return;
+
     const args = msg.content.split(/ +/);
     const firstWord = args.shift().toLowerCase();
 
