@@ -18,7 +18,6 @@
     },
     "homepage": "https://github.com/RileyAbr/rat-facts-Discord-Bot#readme",
     "dependencies": {
-        "body-parser": "^1.19.0",
         "discord.js": "^12.2.0",
         "express": "^4.17.1"
     }
