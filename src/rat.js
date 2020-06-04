@@ -18,6 +18,7 @@ Object.keys(botCommands).map((key) => {
 // Executed when the bot first connects to the server
 bot.on("ready", () => {
     console.info(`Logged in as ${bot.user.tag}!`);
+    bot.user.setActivity("!rat help");
 });
 
 // Handles all commands sent to the bot
