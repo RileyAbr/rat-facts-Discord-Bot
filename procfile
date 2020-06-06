@@ -1,1 +1,1 @@
-web: node ./src/rat.js
+worker: node ./src/rat.js
