@@ -1,1 +1,1 @@
-worker: node ./src/rat.js
+worker: npm start
