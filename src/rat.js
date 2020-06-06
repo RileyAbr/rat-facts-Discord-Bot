@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 // Holds the super-secret token for the bot in a config file
-const { BOT_TOKEN } = require("../config.json");
+// const { BOT_TOKEN } = require("../config.json");
 
 // The command to summon the bot
 const PREFIX = "!rat";
@@ -45,4 +45,4 @@ bot.on("message", (msg) => {
 });
 
 // Logs the bot into the server
-bot.login(BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN);
