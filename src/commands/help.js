@@ -17,13 +17,13 @@ module.exports = {
                     name: "!rat fact (!rat)",
                     value: "Gives a random fact about rats",
                 },
-                // {
-                //     name: "!rat pic",
-                //     value: "Shows off a picture of a rat",
-                // },
+                {
+                    name: "!rat pic",
+                    value: "Shows off a picture of a rat",
+                },
                 {
                     name: "!rat help",
-                    value: "Shows all of the commands available",
+                    value: "Lists all of the commands available",
                 }
             )
             .setFooter(
