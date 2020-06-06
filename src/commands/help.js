@@ -22,6 +22,14 @@ module.exports = {
                     value: "Shows off a picture of a rat",
                 },
                 {
+                    name: "!rat joke",
+                    value: "Tells a joke about rats",
+                },
+                {
+                    name: "!rat 8ball",
+                    value: "The bot predicts your future",
+                },
+                {
                     name: "!rat help",
                     value: "Lists all of the commands available",
                 }
