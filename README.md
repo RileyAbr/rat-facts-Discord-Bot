@@ -19,7 +19,7 @@ All commands are evoked with `!rat`.
 -   `!rat fact (!rat)`
 -   `!rat pic`
 -   `!rat joke`
--   `!rat 8ball`
+-   `!rat 8ball {question}`
 -   `!rat lore`
 -   `!rat help`
 
