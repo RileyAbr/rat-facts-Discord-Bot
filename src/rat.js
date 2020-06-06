@@ -46,4 +46,5 @@ bot.on("message", (msg) => {
 });
 
 // Logs the bot into the server
+// Heroku uses process.env.BOT_TOKEN rather than CONFIG_BOT_TOKEN
 bot.login(process.env.BOT_TOKEN || DEV_BOT_TOKEN);
