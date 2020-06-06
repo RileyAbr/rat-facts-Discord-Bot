@@ -26,7 +26,7 @@ module.exports = {
                     value: "Tells a joke about rats",
                 },
                 {
-                    name: "!rat 8ball",
+                    name: "!rat 8ball {question}",
                     value: "The bot predicts your future",
                 },
                 {
