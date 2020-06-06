@@ -11,6 +11,7 @@ module.exports = {
             );
         }
 
+        // Checks if the extra arguements provided was actually a question
         const lastWord = args[args.length - 1];
         const lastLetterOfLastWord = lastWord.charAt(lastWord.length - 1);
 
