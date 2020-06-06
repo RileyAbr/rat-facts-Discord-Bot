@@ -1,1 +1,1 @@
-worker: node rat.js
+worker: node ./src/rat.js
