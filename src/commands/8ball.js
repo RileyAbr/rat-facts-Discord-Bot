@@ -7,7 +7,7 @@ module.exports = {
     execute(msg, args) {
         if (args.length < 1) {
             msg.channel.send(
-                "> 🐀🔮 **The o-rat-le says:** Please submit a question."
+                "> 🐀🔮 **The o-rat-cle says:** Please submit a question."
             );
         }
 
