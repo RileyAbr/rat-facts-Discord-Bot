@@ -17,7 +17,7 @@ module.exports = {
 
         if (lastLetterOfLastWord == "?") {
             msg.channel.send(
-                `> 🐀🔮 **The o-rat-le says:** ${
+                `> 🐀🔮 **The o-rat-cle says:** ${
                     ratFortunes[
                         Math.floor(Math.random() * [ratFortunes.length])
                     ]
@@ -25,7 +25,7 @@ module.exports = {
             );
         } else {
             msg.channel.send(
-                "> 🐀🔮 **The o-rat-le says:** Please submit a question."
+                "> 🐀🔮 **The o-rat-cle says:** Please submit a question."
             );
         }
     },
