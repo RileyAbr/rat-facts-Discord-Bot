@@ -22,6 +22,7 @@ All commands are evoked with `!rat`.
 -   `!rat 8ball {question}`
 -   `!rat lore`
 -   `!rat help`
+-   `!rat misc`
 
 ## Adding rat facts to a server
 
