@@ -7,4 +7,5 @@ module.exports = {
     Help: require("./help"),
     // Misc: require("./misc"),
     Intimidate: require("./intimidate"),
+    Attattat: require("./attattat"),
 };
