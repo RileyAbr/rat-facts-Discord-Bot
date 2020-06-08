@@ -7,7 +7,7 @@ module.exports = {
     name: "pic",
     description: "Shows off a picture of a rat",
     execute(msg, args) {
-        const exampleEmbed = new Discord.MessageEmbed()
+        const picEmbed = new Discord.MessageEmbed()
             .setTitle(
                 picCaptions[Math.floor(Math.random() * [picCaptions.length])]
             )
@@ -15,6 +15,6 @@ module.exports = {
                 ratPics[Math.floor(Math.random() * [picCaptions.length])]
             );
 
-        msg.channel.send(exampleEmbed);
+        msg.channel.send(picEmbed);
     },
 };

@@ -4,7 +4,7 @@ module.exports = {
     name: "help",
     description: "Shows all of the commands available",
     execute(msg, args) {
-        const exampleEmbed = new Discord.MessageEmbed()
+        const helpEmbed = new Discord.MessageEmbed()
             .setColor("#66757f")
             .setTitle("!rat commands")
             // .setURL("")
@@ -36,6 +36,10 @@ module.exports = {
                 {
                     name: "!rat help",
                     value: "Lists all of the commands available",
+                },
+                {
+                    name: "!rat misc",
+                    value: "Lists small, one-off commands",
                 }
             )
             .setFooter(
@@ -43,6 +47,6 @@ module.exports = {
                 "https://avatars3.githubusercontent.com/u/32375220?s=460&u=a375968682555bb66226556bf7ee33d6d35b7961&v=4"
             );
 
-        msg.channel.send(exampleEmbed);
+        msg.channel.send(helpEmbed);
     },
 };
