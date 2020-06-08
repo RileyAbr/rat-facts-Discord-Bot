@@ -8,4 +8,5 @@ module.exports = {
     Misc: require("./misc"),
     Intimidate: require("./intimidate"),
     Attattat: require("./attattat"),
+    Train: require("./train"),
 };

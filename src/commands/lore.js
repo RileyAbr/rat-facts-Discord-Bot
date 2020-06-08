@@ -8,9 +8,9 @@ module.exports = {
     name: "lore",
     description: "Tells the story of the rat facts bot",
     execute(msg, args) {
-        const loreEmbed = new Discord.MessageEmbed().setTitle(
-            "The lore of rat facts"
-        );
+        const loreEmbed = new Discord.MessageEmbed()
+            .setColor("#66757f")
+            .setTitle("The lore of rat facts");
 
         for (chapter in ratLore) {
             loreEmbed.addFields({ name: chapter, value: ratLore[chapter] });

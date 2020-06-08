@@ -8,6 +8,7 @@ module.exports = {
     description: "Shows off a picture of a rat",
     execute(msg, args) {
         const picEmbed = new Discord.MessageEmbed()
+            .setColor("#66757f")
             .setTitle(
                 picCaptions[Math.floor(Math.random() * [picCaptions.length])]
             )

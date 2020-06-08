@@ -18,6 +18,10 @@ module.exports = {
                 {
                     name: "!rat attattat",
                     value: "Displays a rat ready to roll out",
+                },
+                {
+                    name: "!rat train",
+                    value: "All board! 🚂🐀🐀🐀",
                 }
             );
 
