@@ -5,4 +5,6 @@ module.exports = {
     Eight: require("./8ball"),
     Lore: require("./lore"),
     Help: require("./help"),
+    // Misc: require("./misc"),
+    Intimidate: require("./intimidate"),
 };
