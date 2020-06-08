@@ -7,8 +7,6 @@ module.exports = {
         const helpEmbed = new Discord.MessageEmbed()
             .setColor("#66757f")
             .setTitle("!rat commands")
-            // .setURL("")
-            // .setDescription("All commands start with !rat")
             .setThumbnail(
                 "https://raw.githubusercontent.com/RileyAbr/rat-facts-Discord-Bot/master/rat_logo.png"
             )
