@@ -41,7 +41,7 @@ module.exports = {
                 }
             )
             .setFooter(
-                "rat bot created by Riley Abrahamson",
+                "rat facts created by Riley Abrahamson",
                 "https://avatars3.githubusercontent.com/u/32375220?s=460&u=a375968682555bb66226556bf7ee33d6d35b7961&v=4"
             );
 
