@@ -22,6 +22,10 @@ module.exports = {
                 {
                     name: "!rat train",
                     value: "All board! 🚂🐀🐀🐀",
+                },
+                {
+                    name: "!rat anthem",
+                    value: "Links the anthem of rats",
                 }
             );
 

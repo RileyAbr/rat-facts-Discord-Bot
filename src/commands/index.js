@@ -9,4 +9,5 @@ module.exports = {
     Intimidate: require("./intimidate"),
     Attattat: require("./attattat"),
     Train: require("./train"),
+    Anthem: require("./anthem"),
 };
