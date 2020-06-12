@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 // Holds the super-secret token for the bot in a config file
 // Only used for testing
-const { CONFIG_BOT_TOKEN, DEV_BOT_TOKEN } = require("../config.json");
+// const { CONFIG_BOT_TOKEN, DEV_BOT_TOKEN } = require("../config.json");
 
 // The command to summon the bot
 const PREFIX = "!rat";
