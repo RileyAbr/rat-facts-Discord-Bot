@@ -10,4 +10,5 @@ module.exports = {
     Attattat: require("./attattat"),
     Train: require("./train"),
     Anthem: require("./anthem"),
+    Great: require("./great"),
 };

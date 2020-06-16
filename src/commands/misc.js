@@ -26,6 +26,10 @@ module.exports = {
                 {
                     name: "!rat anthem",
                     value: "Links the anthem of rats",
+                },
+                {
+                    name: "!rat great",
+                    value: "Sponsored by the Honda Ratccord",
                 }
             );
 
