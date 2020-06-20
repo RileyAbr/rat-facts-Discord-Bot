@@ -28,6 +28,10 @@ module.exports = {
                     value: "The bot predicts your future",
                 },
                 {
+                    name: "!rat role",
+                    value: "Become a rat. Use again to no longer be a rat",
+                },
+                {
                     name: "!rat lore",
                     value: "Tells the story of the rat facts bot",
                 },
