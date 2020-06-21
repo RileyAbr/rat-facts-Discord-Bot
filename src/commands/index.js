@@ -7,10 +7,12 @@ module.exports = {
     Role: require("./main/role"),
     Role2: require("./main/role2"),
     Help: require("./main/help"),
+    Author: require("./main/author"),
     Misc: require("./misc/misc"),
     Intimidate: require("./misc/intimidate"),
     Attattat: require("./misc/attattat"),
     Train: require("./misc/train"),
     Anthem: require("./misc/anthem"),
     Great: require("./misc/great"),
+    Version: require("./misc/version"),
 };

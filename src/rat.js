@@ -20,8 +20,13 @@ Object.keys(botCommands).map((key) => {
 
 // Executed when the bot first connects to the server
 bot.on("ready", () => {
-    console.info(`Logged in as ${bot.user.tag}!`);
+    console.info(`Logged in as ${bot.user.tag}`);
     bot.user.setActivity("!rat help");
+});
+
+// Logs when the bot is invited to a new server
+bot.on("guildCreate", (guild) => {
+    console.info(`Added to a new server! ${guild.name}`);
 });
 
 // Handles all commands sent to the bot

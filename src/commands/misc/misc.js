@@ -30,6 +30,10 @@ module.exports = {
                 {
                     name: "!rat great",
                     value: "Sponsored by the Honda Ratccord",
+                },
+                {
+                    name: "!rat version",
+                    value: "Shows the current release of rat facts",
                 }
             );
 
