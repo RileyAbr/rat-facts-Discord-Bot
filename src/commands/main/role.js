@@ -3,10 +3,13 @@ module.exports = {
     description: "Become a rat. Use again to no longer be a rat",
     execute(msg, args) {
         // Checks for an existing rat role on the server
-        let ratRole = msg.guild.roles.cache.find((role) => role.name === "rat");
-        if (!ratRole) {
-            ratRole = msg.guild.roles.cache.find((role) => role.name === "Rat");
-        }
+        let ratRole = msg.guild.roles.cache.find(
+            (role) => role.name.toLowerCase() === "rat"
+        );
+
+        // if (!ratRole) {
+        //     ratRole = msg.guild.roles.cache.find((role) => role.name === "Rat");
+        // }
 
         if (ratRole) {
             if (msg.member.roles.cache.has(ratRole.id)) {

@@ -5,13 +5,8 @@ module.exports = {
     execute(msg, args) {
         // Checks for an existing rat role on the server
         let ratRole = msg.guild.roles.cache.find(
-            (role) => role.name === "rat2"
+            (role) => role.name.toLowerCase() === "rat2"
         );
-        if (!ratRole) {
-            ratRole = msg.guild.roles.cache.find(
-                (role) => role.name === "Rat2"
-            );
-        }
 
         if (ratRole) {
             if (msg.member.roles.cache.has(ratRole.id)) {
