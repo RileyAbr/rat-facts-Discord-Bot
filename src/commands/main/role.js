@@ -7,10 +7,6 @@ module.exports = {
             (role) => role.name.toLowerCase() === "rat"
         );
 
-        // if (!ratRole) {
-        //     ratRole = msg.guild.roles.cache.find((role) => role.name === "Rat");
-        // }
-
         if (ratRole) {
             if (msg.member.roles.cache.has(ratRole.id)) {
                 msg.member.roles.remove(ratRole);
