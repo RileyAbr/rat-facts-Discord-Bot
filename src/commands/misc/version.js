@@ -8,14 +8,14 @@ module.exports = {
             .setColor("#66757f")
             .setTitle("rat facts Discord Bot")
             .setURL(
-                "https://github.com/RileyAbr/rat-facts-Discord-Bot/releases/tag/v5.0.0"
+                "https://github.com/RileyAbr/rat-facts-Discord-Bot/releases/tag/v5.0.1"
             )
             .setThumbnail(
                 "https://raw.githubusercontent.com/RileyAbr/rat-facts-Discord-Bot/master/rat_logo.png"
             )
             .addFields({
                 name: "Current Release",
-                value: "v5.0.0",
+                value: "v5.0.1",
             })
             .setFooter(
                 "rat facts created by Riley Abrahamson",
