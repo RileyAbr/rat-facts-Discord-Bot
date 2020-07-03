@@ -33,7 +33,7 @@ module.exports = {
                 },
                 {
                     name: "!rat version",
-                    value: "Shows the current release of rat facts",
+                    value: "Shows the current release of `rat facts`",
                 }
             );
 

@@ -28,6 +28,10 @@ module.exports = {
                     value: "The bot predicts your future",
                 },
                 {
+                    name: "!rat quiz",
+                    value: "Asks a true/false rat question",
+                },
+                {
                     name: "!rat role (!rat role2)",
                     value: "Become a rat. Use again to no longer be a rat",
                 },
@@ -37,7 +41,7 @@ module.exports = {
                 },
                 {
                     name: "!rat author",
-                    value: "Provides the author and metadata for the bot",
+                    value: "Provides the author and their social links",
                 },
                 {
                     name: "!rat help",

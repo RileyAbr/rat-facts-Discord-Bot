@@ -10,6 +10,7 @@ Rat facts is a Discord bot that delivers rat content.
 -   Shows off pictures of rats
 -   Tells jokes about rats
 -   Consults the O-rat-cle to predict your future
+-   Take a quiz on your rat knowledge
 -   Become labeled a rat yourself
 -   Describes the lore beyond a great rat civil war
 
@@ -21,6 +22,7 @@ All commands are evoked with `!rat`.
 -   `!rat pic`
 -   `!rat joke`
 -   `!rat 8ball {question}`
+-   `!rat quiz`
 -   `!rat role`
 -   `!rat lore`
 -   `!rat help`
