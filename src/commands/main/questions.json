@@ -1,0 +1,110 @@
+[
+    {
+        "question": "The rats helped carry the bubonic plague.",
+        "answer": true
+    },
+    {
+        "question": "Rats can survive falls of up to 200 feet.",
+        "answer": false
+    },
+    {
+        "question": "Most rats are nocturnal.",
+        "answer": true
+    },
+    {
+        "question": "All seven contintents are inhabited by rats.",
+        "answer": false
+    },
+    {
+        "question": "The *Rattus norveigcus domestica* is a species of rat.",
+        "answer": true
+    },
+    {
+        "question": "The *Rattus rattus* is a species of rat.",
+        "answer": true
+    },
+    {
+        "question": "The *Rattus exulans* is a species of rat.",
+        "answer": true
+    },
+    {
+        "question": "The *Rattus magnitudinis eximiae* is a species of rat.",
+        "answer": false
+    },
+    {
+        "question": "The *Rattus swevedus lorustica* is a species of rat.",
+        "answer": false
+    },
+    {
+        "question": "Rats have poor memories.",
+        "answer": false
+    },
+    {
+        "question": "Rats don't have belly buttons.",
+        "answer": false
+    },
+    {
+        "question": "The teeth of rats are stronger as steel.",
+        "answer": true
+    },
+    {
+        "question": "There is an area in Canada that is completely free of rats.",
+        "answer": true
+    },
+    {
+        "question": "There is an area in Norway that is completely free of rats.",
+        "answer": false
+    },
+    {
+        "question": "Rats can laugh.",
+        "answer": true
+    },
+    {
+        "question": "Rats are very inquisitive and like to investigate new things.",
+        "answer": false
+    },
+    {
+        "question": "Rats are excellent climbers.",
+        "answer": true
+    },
+    {
+        "question": "Rats can laugh.",
+        "answer": true
+    },
+    {
+        "question": "Rats live independent lifestyles.",
+        "answer": false
+    },
+    {
+        "question": "Rats experience regret.",
+        "answer": true
+    },
+    {
+        "question": "Rats can laugh.",
+        "answer": true
+    },
+    {
+        "question": "There is an emoji celebrating rats.",
+        "answer": true
+    },
+    {
+        "question": "Modern Chuck E Cheese is a rat.",
+        "answer": false
+    },
+    {
+        "question": "The four ninja turtles were raised by a mutant rat.",
+        "answer": true
+    },
+    {
+        "question": "Rats can laugh.",
+        "answer": true
+    },
+    {
+        "question": "The Year of the Rat is the 4th in the cycle of the Chinese zodiac.",
+        "answer": true
+    },
+    {
+        "question": "There are over 100 species of rats.",
+        "answer": false
+    }
+]

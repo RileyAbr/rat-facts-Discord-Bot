@@ -1,13 +1,16 @@
 module.exports = {
+    // Main Commands
     Fact: require("./main/fact"),
     Pic: require("./main/pic"),
     Joke: require("./main/joke"),
     Eight: require("./main/8ball"),
+    Quiz: require("./main/quiz"),
     Lore: require("./main/lore"),
     Role: require("./main/role"),
     Role2: require("./main/role2"),
     Help: require("./main/help"),
     Author: require("./main/author"),
+    // Misc Commands
     Misc: require("./misc/misc"),
     Intimidate: require("./misc/intimidate"),
     Attattat: require("./misc/attattat"),
