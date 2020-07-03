@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
-const picCaptions = require("./picCaptions.json");
-const ratPics = require("./pics.json");
+const picCaptions = require("../../data/picCaptions.json");
+const ratPics = require("../../data/pics.json");
 
 module.exports = {
     name: "pic",

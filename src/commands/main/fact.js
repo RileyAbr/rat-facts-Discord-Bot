@@ -1,5 +1,5 @@
 // Load all rat facts
-const ratFacts = require("./facts");
+const ratFacts = require("../../data/facts.json");
 
 module.exports = {
     name: "fact",

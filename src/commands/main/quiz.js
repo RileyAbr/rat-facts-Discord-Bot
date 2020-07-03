@@ -1,6 +1,6 @@
 // Load all rat facts
 // The questions are stored in a format of
-const ratQuestions = require("./questions");
+const ratQuestions = require("../../data/questions");
 const Discord = require("discord.js");
 
 function convertReactionToBoolean(reactionEmoji) {

@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-const greatScript = require("./chasing.json");
+const greatScript = require("../../data/chasing.json");
 
 module.exports = {
     name: "great",

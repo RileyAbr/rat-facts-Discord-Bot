@@ -1,5 +1,5 @@
 // Load all fortunes
-const ratFortunes = require("./fortunes");
+const ratFortunes = require("../../data/fortunes.json");
 
 module.exports = {
     name: "8ball",

@@ -1,5 +1,5 @@
 // Load all jokes
-const ratJokes = require("./jokes");
+const ratJokes = require("../../data/jokes");
 
 module.exports = {
     name: "joke",
