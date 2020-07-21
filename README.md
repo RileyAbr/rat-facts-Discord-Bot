@@ -2,7 +2,7 @@
 
 ![Image of rat emoji](https://github.com/RileyAbr/rat-facts-Discord-Bot/blob/master/rat_logo.png)
 
-Rat facts is a Discord bot that delivers rat content.
+Rat facts is a Discord bot that delivers rat-based content.
 
 ## Features
 
