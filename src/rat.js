@@ -20,7 +20,13 @@ Object.keys(botCommands).map((key) => {
 
 // Executed when the bot first connects to the server
 bot.on("ready", () => {
+    let guildCount = 0
+    bot.guilds.cache.forEach(guild => {
+        guildCount++;
+        console.info(guild.name);
+    });
     console.info(`Logged in as ${bot.user.tag}`);
+    console.info(`I am currently in-use in ${guildCount} servers`);
     bot.user.setActivity("!rat help");
 });
 
