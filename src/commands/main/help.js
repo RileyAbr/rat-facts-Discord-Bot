@@ -37,7 +37,7 @@ module.exports = {
                 },
                 {
                     name: "!rat lore",
-                    value: "Tells the story of the rat facts bot",
+                    value: "Tells the story of the `rat facts` bot",
                 },
                 {
                     name: "!rat author",
@@ -46,6 +46,10 @@ module.exports = {
                 {
                     name: "!rat help",
                     value: "Lists all of the commands available",
+                },
+                {
+                    name: "!rat donate",
+                    value: "Provides ways to donate to rat bot",
                 },
                 {
                     name: "!rat misc",
