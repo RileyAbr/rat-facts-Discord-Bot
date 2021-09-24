@@ -35,7 +35,7 @@ module.exports = {
             .setDescription(quizQuestion.question)
             .addFields(
                 { name: "\u200B", value: "True: ✅", inline: true },
-                { name: "\u200B", value: "False: ✅", inline: true }
+                { name: "\u200B", value: "False: ❎", inline: true }
             );
 
         const tacticalEmbed = new Discord.MessageEmbed()
