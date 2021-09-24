@@ -1,4 +1,7 @@
 const Discord = require("discord.js");
+const version = require("../../../package.json").version;
+
+const releaseUrl = require("../../scripts/mostRecentRelease").releaseLink;
 
 module.exports = {
     name: "version",
@@ -7,15 +10,13 @@ module.exports = {
         const versionEmbed = new Discord.MessageEmbed()
             .setColor("#66757f")
             .setTitle("rat facts Discord Bot")
-            .setURL(
-                "https://github.com/RileyAbr/rat-facts-Discord-Bot/releases/tag/v5.0.1"
-            )
+            .setURL(releaseUrl)
             .setThumbnail(
                 "https://raw.githubusercontent.com/RileyAbr/rat-facts-Discord-Bot/master/rat_logo.png"
             )
             .addFields({
                 name: "Current Release",
-                value: "v5.0.1",
+                value: version,
             })
             .setFooter(
                 "rat facts created by Riley Abrahamson",
