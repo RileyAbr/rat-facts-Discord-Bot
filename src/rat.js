@@ -1,10 +1,8 @@
 const Discord = require("discord.js");
 
 // Holds the super-secret token for the bot in an external .env file
-// Only used for development, in production the BOT_TOKEN is set through the provider (like Heroku)
-if (process.env.NODE_ENV !== "production") {
-    require("dotenv").config();
-}
+// Only used for development, in production the BOT_TOKEN is set through the provider
+require("dotenv").config();
 
 // The command to summon the bot
 const PREFIX = "!rat";
@@ -66,5 +64,8 @@ bot.on("message", (msg) => {
     }
 });
 
-// Heroku uses process.env.BOT_TOKEN to login the bot
-bot.login(process.env.BOT_TOKEN);
+if (process.env.NODE_ENV === "production") {
+    bot.login(process.env.BOT_TOKEN);
+} else {
+    bot.login(process.env.DEV_BOT_TOKEN);
+}
