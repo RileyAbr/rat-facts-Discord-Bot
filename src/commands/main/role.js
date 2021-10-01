@@ -15,11 +15,24 @@ module.exports = {
                 msg.member.roles.add(ratRole);
                 msg.reply("Welcome to the rats!  🎉");
             }
-            //
         } else {
-            msg.channel.send(
-                "> A `rat` role has not been added to this server. Contact your server admin!"
-            );
+            try {
+                msg.guild.roles.create({
+                    data: {
+                        name: "rat",
+                        color: "GRAY",
+                    },
+                    reason: "rat facts created this role",
+                });
+
+                msg.channel.send(
+                    "> `rat` role was created! Please run `rat role` again to become a rat."
+                );
+            } catch {
+                msg.channel.send(
+                    "> `rat facts` could not create a `rat` role. Contact your server admin!"
+                );
+            }
         }
     },
 };
