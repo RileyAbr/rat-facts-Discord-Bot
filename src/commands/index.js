@@ -10,6 +10,7 @@ module.exports = {
     Role2: require("./main/role2"),
     Help: require("./main/help"),
     Author: require("./main/author"),
+    Donate: require("./main/donate"),
     // Misc Commands
     Misc: require("./misc/misc"),
     Intimidate: require("./misc/intimidate"),
