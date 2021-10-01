@@ -49,7 +49,7 @@ module.exports = {
                 },
                 {
                     name: "!rat donate",
-                    value: "Provides ways to donate to rat bot",
+                    value: "Provides ways to donate to `rat facts`",
                 },
                 {
                     name: "!rat misc",
