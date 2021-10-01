@@ -26,7 +26,7 @@ module.exports = {
                 });
 
                 msg.channel.send(
-                    "> `rat` role was created! Please run `rat role` again to become a rat."
+                    "> `rat` role was created! Please run `!rat role` again to become a rat."
                 );
             } catch {
                 msg.channel.send(
