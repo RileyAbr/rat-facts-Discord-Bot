@@ -65,7 +65,9 @@ bot.on("message", (msg) => {
 });
 
 if (process.env.NODE_ENV === "production") {
+    console.info("WARNING: Starting Prod");
     bot.login(process.env.BOT_TOKEN);
 } else {
+    console.info("Starting Dev");
     bot.login(process.env.DEV_BOT_TOKEN);
 }
