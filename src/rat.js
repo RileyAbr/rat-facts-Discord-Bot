@@ -18,13 +18,8 @@ Object.keys(botCommands).map((key) => {
 
 // Executed when the bot first connects to the server
 bot.on("ready", () => {
-    let guildCount = 0;
-    bot.guilds.cache.forEach((guild) => {
-        guildCount++;
-        console.info(guild.name);
-    });
-    console.info(`Logged in as ${bot.user.tag}`);
-    console.info(`I am currently in-use in ${guildCount} servers`);
+    let guildCount = bot.guilds.cache.length;
+
     bot.user.setActivity("!rat help");
     let showHelpActivity = true;
 
@@ -34,6 +29,8 @@ bot.on("ready", () => {
             : bot.user.setActivity(`active in ${guildCount} servers!`);
         showHelpActivity = !showHelpActivity;
     }, 10000);
+
+    console.info(`Logged in as ${bot.user.tag}`);
 });
 
 // Logs when the bot is invited to a new server
@@ -65,9 +62,9 @@ bot.on("message", (msg) => {
 });
 
 if (process.env.NODE_ENV === "production") {
-    console.info("WARNING: Starting Prod");
+    console.info("🚨 Starting Prod");
     bot.login(process.env.BOT_TOKEN);
 } else {
-    console.info("Starting Dev");
+    console.info("🔧 Starting Dev");
     bot.login(process.env.DEV_BOT_TOKEN);
 }

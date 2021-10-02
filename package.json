@@ -5,7 +5,7 @@
     "main": "rat.js",
     "scripts": {
         "start": "nodemon ./src/rat.js",
-        "prod": "env NODE_ENV=production nodemon ./src/rat.js",
+        "prod": "env NODE_ENV=production npm start",
         "guilds": "node ./src/guilds.js"
     },
     "repository": {
