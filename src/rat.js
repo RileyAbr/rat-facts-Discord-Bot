@@ -1,4 +1,6 @@
 const Discord = require("discord.js");
+const fs = require("fs");
+const patchEmbed = require("./scripts/createPatchEmbed").patchEmbed;
 
 // Holds the super-secret token for the bot in an external .env file
 // Only used for development, in production the BOT_TOKEN is set through the provider
@@ -29,6 +31,19 @@ bot.on("ready", () => {
             : bot.user.setActivity(`active in ${guildCount} servers!`);
         showHelpActivity = !showHelpActivity;
     }, 10000);
+
+    const botChannel = bot.channels.cache.find(
+        (channel) =>
+            channel.type == "text" &&
+            (channel.name.toLowerCase().includes("general") ||
+                channel.name.toLowerCase().includes("bot"))
+    );
+
+    if (botChannel !== undefined) {
+        bot.channels.fetch(botChannel.id).then((channel) => {
+            channel.send(patchEmbed);
+        });
+    }
 
     console.info(`Logged in as ${bot.user.tag}`);
 });
