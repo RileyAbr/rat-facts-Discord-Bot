@@ -4,8 +4,8 @@
     "description": "A Discord bot that delivers rat content.",
     "main": "rat.js",
     "scripts": {
-        "start": "nodemon ./src/rat.js",
-        "prod": "env NODE_ENV=production npm start",
+        "start": "env NODE_ENV=production node ./src/rat.js",
+        "dev": "nodemon ./src/rat.js",
         "guilds": "node ./src/guilds.js"
     },
     "repository": {
