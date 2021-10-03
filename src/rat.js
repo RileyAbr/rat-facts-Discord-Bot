@@ -35,8 +35,8 @@ bot.on("ready", () => {
     const botChannel = bot.channels.cache.find(
         (channel) =>
             channel.type == "text" &&
-            (channel.name.toLowerCase().includes("general") ||
-                channel.name.toLowerCase().includes("bot"))
+            (channel.name.toLowerCase().includes("bot") ||
+                channel.name.toLowerCase().includes("general"))
     );
 
     if (botChannel !== undefined) {
