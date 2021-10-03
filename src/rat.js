@@ -1,10 +1,10 @@
 const Discord = require("discord.js");
+const fs = require("fs");
+const patchEmbed = require("./scripts/createPatchEmbed").patchEmbed;
 
 // Holds the super-secret token for the bot in an external .env file
-// Only used for development, in production the BOT_TOKEN is set through the provider (like Heroku)
-if (process.env.NODE_ENV !== "production") {
-    require("dotenv").config();
-}
+// Only used for development, in production the BOT_TOKEN is set through the provider
+require("dotenv").config();
 
 // The command to summon the bot
 const PREFIX = "!rat";
@@ -20,8 +20,32 @@ Object.keys(botCommands).map((key) => {
 
 // Executed when the bot first connects to the server
 bot.on("ready", () => {
-    console.info(`Logged in as ${bot.user.tag}`);
+    let guildCount = bot.guilds.cache.length;
+
     bot.user.setActivity("!rat help");
+    let showHelpActivity = true;
+
+    setInterval(function () {
+        showHelpActivity
+            ? bot.user.setActivity("!rat help")
+            : bot.user.setActivity(`active in ${guildCount} servers!`);
+        showHelpActivity = !showHelpActivity;
+    }, 10000);
+
+    const botChannel = bot.channels.cache.find(
+        (channel) =>
+            channel.type == "text" &&
+            (channel.name.toLowerCase().includes("bot") ||
+                channel.name.toLowerCase().includes("general"))
+    );
+
+    if (botChannel !== undefined) {
+        bot.channels.fetch(botChannel.id).then((channel) => {
+            channel.send(patchEmbed);
+        });
+    }
+
+    console.info(`Logged in as ${bot.user.tag}`);
 });
 
 // Logs when the bot is invited to a new server
@@ -38,7 +62,7 @@ bot.on("message", (msg) => {
     const firstWord = args.shift().toLowerCase();
 
     // Only process messsages that contain the !rat prefix
-    if (firstWord == PREFIX) {
+    if (firstWord === PREFIX) {
         // Checks whether or not the command request has additional parameters
         // If no command is specified, the default command is a rat fact
         const command = args.length > 0 ? args.shift().toLowerCase() : "fact";
@@ -52,5 +76,10 @@ bot.on("message", (msg) => {
     }
 });
 
-// Heroku uses process.env.BOT_TOKEN to login the bot
-bot.login(process.env.BOT_TOKEN);
+if (process.env.NODE_ENV === "production") {
+    console.info("🚨 Starting Prod");
+    bot.login(process.env.BOT_TOKEN);
+} else {
+    console.info("🔧 Starting Dev");
+    bot.login(process.env.DEV_BOT_TOKEN);
+}

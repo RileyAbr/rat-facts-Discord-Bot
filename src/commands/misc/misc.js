@@ -1,7 +1,14 @@
 const Discord = require("discord.js");
+const ratIntimidate = require("./intimidate");
+const ratAttattat = require("./attattat");
+const ratTrain = require("./train");
+const ratAnthem = require("./anthem");
+const ratGreat = require("./great");
+const ratVersion = require("./version");
 
 module.exports = {
     name: "misc",
+    commandUsage: "!rat misc",
     description: "Lists small, one-off commands",
     execute(msg, args) {
         const miscEmbed = new Discord.MessageEmbed()
@@ -12,28 +19,28 @@ module.exports = {
             )
             .addFields(
                 {
-                    name: "!rat intimidate",
-                    value: "Displays an intimidating rat",
+                    name: ratIntimidate.commandUsage,
+                    value: ratIntimidate.description,
                 },
                 {
-                    name: "!rat attattat",
-                    value: "Displays a rat ready to roll out",
+                    name: ratAttattat.commandUsage,
+                    value: ratAttattat.description,
                 },
                 {
-                    name: "!rat train",
-                    value: "All board! 🚂🐀🐀🐀",
+                    name: ratTrain.commandUsage,
+                    value: ratTrain.description,
                 },
                 {
-                    name: "!rat anthem",
-                    value: "Links the anthem of rats",
+                    name: ratAnthem.commandUsage,
+                    value: ratAnthem.description,
                 },
                 {
-                    name: "!rat great",
-                    value: "Sponsored by the Honda Ratccord",
+                    name: ratGreat.commandUsage,
+                    value: ratGreat.description,
                 },
                 {
-                    name: "!rat version",
-                    value: "Shows the current release of `rat facts`",
+                    name: ratVersion.commandUsage,
+                    value: ratVersion.description,
                 }
             );
 

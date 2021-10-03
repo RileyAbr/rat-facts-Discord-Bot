@@ -1,11 +1,12 @@
 {
     "name": "rat-facts",
-    "version": "1.0.0",
+    "version": "6.0.0",
     "description": "A Discord bot that delivers rat content.",
     "main": "rat.js",
     "scripts": {
-        "start": "node ./src/rat.js",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "nodemon ./src/rat.js",
+        "prod": "env NODE_ENV=production npm start",
+        "guilds": "node ./src/guilds.js"
     },
     "repository": {
         "type": "git",
@@ -21,5 +22,8 @@
         "discord.js": "^12.2.0",
         "dotenv": "^8.2.0",
         "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.13"
     }
 }

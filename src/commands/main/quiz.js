@@ -1,5 +1,4 @@
-// Load all rat facts
-// The questions are stored in a format of
+// Load all rat questions
 const ratQuestions = require("../../data/questions");
 const Discord = require("discord.js");
 
@@ -11,6 +10,7 @@ function convertReactionToBoolean(reactionEmoji) {
 
 module.exports = {
     name: "quiz",
+    commandUsage: "!rat quiz",
     description: "Asks a true/false rat question",
     execute(msg, args) {
         const originalAuthor = msg.author.id;
@@ -35,18 +35,10 @@ module.exports = {
             .setDescription(quizQuestion.question)
             .addFields(
                 { name: "\u200B", value: "True: ✅", inline: true },
-                { name: "\u200B", value: "False: ✅", inline: true }
-            );
-
-        const tacticalEmbed = new Discord.MessageEmbed()
-            .setColor("#66757f")
-            .setTitle("🔫🐀")
-            .setImage(
-                "https://raw.githubusercontent.com/RileyAbr/rat-facts-Discord-Bot/master/assets/rat_pics/rat_tactical.jpg"
+                { name: "\u200B", value: "False: ❎", inline: true }
             );
 
         msg.channel
-            // .send(`> True or false? ${quizQuestion.question}`)
             .send(quizEmbed)
             .then((msgQuestion) => {
                 msgQuestion.react("✅");
