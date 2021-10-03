@@ -25,12 +25,12 @@ bot.on("ready", () => {
     bot.user.setActivity("!rat help");
     let showHelpActivity = true;
 
-    setInterval(function () {
-        showHelpActivity
-            ? bot.user.setActivity("!rat help")
-            : bot.user.setActivity(`active in ${guildCount} servers!`);
-        showHelpActivity = !showHelpActivity;
-    }, 10000);
+    // setInterval(function () {
+    //     showHelpActivity
+    //         ? bot.user.setActivity("!rat help")
+    //         : bot.user.setActivity(`active in ${guildCount} servers!`);
+    //     showHelpActivity = !showHelpActivity;
+    // }, 10000);
 
     const botChannel = bot.channels.cache.find(
         (channel) =>
