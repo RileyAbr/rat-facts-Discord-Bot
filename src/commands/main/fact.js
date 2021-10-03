@@ -1,8 +1,8 @@
-// Load all rat facts
 const ratFacts = require("../../data/facts.json");
 
 module.exports = {
     name: "fact",
+    commandUsage: "!rat fact (!rat)",
     description: "Gives a fact about rats",
     execute(msg, args) {
         msg.channel.send(

@@ -3,7 +3,7 @@ module.exports = {
     Fact: require("./main/fact"),
     Pic: require("./main/pic"),
     Joke: require("./main/joke"),
-    Eight: require("./main/8ball"),
+    "8Ball": require("./main/8ball"),
     Quiz: require("./main/quiz"),
     Lore: require("./main/lore"),
     Role: require("./main/role"),

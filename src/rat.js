@@ -47,7 +47,7 @@ bot.on("message", (msg) => {
     const firstWord = args.shift().toLowerCase();
 
     // Only process messsages that contain the !rat prefix
-    if (firstWord == PREFIX) {
+    if (firstWord === PREFIX) {
         // Checks whether or not the command request has additional parameters
         // If no command is specified, the default command is a rat fact
         const command = args.length > 0 ? args.shift().toLowerCase() : "fact";

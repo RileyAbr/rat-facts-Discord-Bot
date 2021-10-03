@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 
 module.exports = {
     name: "train",
+    commandUsage: "!rat train",
     description: "Sends out a train of rats. Choo choo!",
     execute(msg, args) {
         const trainEmbed = new Discord.MessageEmbed()

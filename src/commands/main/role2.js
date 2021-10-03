@@ -1,5 +1,6 @@
 module.exports = {
     name: "role2",
+    commandUsage: "!rat role2",
     description:
         "Become a different kind of rat. Use again to no longer be a rat2",
     execute(msg, args) {

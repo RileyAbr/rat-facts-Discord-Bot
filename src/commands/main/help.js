@@ -1,8 +1,19 @@
 const Discord = require("discord.js");
+const ratFact = require("./fact");
+const ratPic = require("./pic");
+const ratJoke = require("./joke");
+const rat8Ball = require("./8ball");
+const ratQuiz = require("./quiz");
+const ratRole = require("./role");
+const ratLore = require("./lore");
+const ratAuthor = require("./author");
+const ratDonate = require("./donate");
+const ratMisc = require("../misc/misc");
 
 module.exports = {
     name: "help",
-    description: "Shows all of the commands available",
+    commandUsage: "!rat help",
+    description: "Lists all of the commands available",
     execute(msg, args) {
         const helpEmbed = new Discord.MessageEmbed()
             .setColor("#66757f")
@@ -12,48 +23,48 @@ module.exports = {
             )
             .addFields(
                 {
-                    name: "!rat fact (!rat)",
-                    value: "Gives a random fact about rats",
+                    name: ratFact.commandUsage,
+                    value: ratFact.description,
                 },
                 {
-                    name: "!rat pic",
-                    value: "Shows off a picture of a rat",
+                    name: ratPic.commandUsage,
+                    value: ratPic.description,
                 },
                 {
-                    name: "!rat joke",
-                    value: "Tells a joke about rats",
+                    name: ratJoke.commandUsage,
+                    value: ratJoke.description,
                 },
                 {
-                    name: "!rat 8ball {question}",
-                    value: "The bot predicts your future",
+                    name: rat8Ball.commandUsage,
+                    value: rat8Ball.description,
                 },
                 {
-                    name: "!rat quiz",
-                    value: "Asks a true/false rat question",
+                    name: ratQuiz.commandUsage,
+                    value: ratQuiz.description,
                 },
                 {
-                    name: "!rat role (!rat role2)",
-                    value: "Become a rat. Use again to no longer be a rat",
+                    name: ratRole.commandUsage,
+                    value: ratRole.description,
                 },
                 {
-                    name: "!rat lore",
-                    value: "Tells the story of the `rat facts` bot",
+                    name: ratLore.commandUsage,
+                    value: ratLore.description,
                 },
                 {
-                    name: "!rat author",
-                    value: "Provides the author and their social links",
+                    name: ratAuthor.commandUsage,
+                    value: ratAuthor.description,
                 },
                 {
-                    name: "!rat help",
-                    value: "Lists all of the commands available",
+                    name: this.commandUsage,
+                    value: this.description,
                 },
                 {
-                    name: "!rat donate",
-                    value: "Provides ways to donate to `rat facts`",
+                    name: ratDonate.commandUsage,
+                    value: ratDonate.description,
                 },
                 {
-                    name: "!rat misc",
-                    value: "Lists small, one-off commands",
+                    name: ratMisc.commandUsage,
+                    value: ratMisc.description,
                 }
             )
             .setFooter(

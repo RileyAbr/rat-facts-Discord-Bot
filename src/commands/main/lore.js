@@ -6,6 +6,7 @@ const ratLore = require("../../data/loreScript");
 // NOTE this command is very server specific, and will only function correctly on the server it was initially designed for without changes to the emoji in the loreScript.json file
 module.exports = {
     name: "lore",
+    commandUsage: "!rat lore",
     description: "Tells the story of the rat facts bot",
     execute(msg, args) {
         const loreEmbed = new Discord.MessageEmbed()

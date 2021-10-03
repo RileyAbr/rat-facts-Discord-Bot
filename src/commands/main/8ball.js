@@ -1,8 +1,8 @@
-// Load all fortunes
 const ratFortunes = require("../../data/fortunes.json");
 
 module.exports = {
     name: "8ball",
+    commandUsage: "!rat 8ball {question}",
     description: "The bot predicts your future",
     execute(msg, args) {
         if (args.length < 1) {
@@ -15,7 +15,7 @@ module.exports = {
         const lastWord = args[args.length - 1];
         const lastLetterOfLastWord = lastWord.charAt(lastWord.length - 1);
 
-        if (lastLetterOfLastWord == "?") {
+        if (lastLetterOfLastWord === "?") {
             msg.channel.send(
                 `> 🐀🔮 **The o-rat-cle says:** ${
                     ratFortunes[

@@ -5,6 +5,7 @@ const ratPics = require("../../data/pics.json");
 
 module.exports = {
     name: "pic",
+    commandUsage: "!rat pic",
     description: "Shows off a picture of a rat",
     execute(msg, args) {
         const picEmbed = new Discord.MessageEmbed()

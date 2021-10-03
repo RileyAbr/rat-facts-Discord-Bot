@@ -1,5 +1,6 @@
 module.exports = {
     name: "role",
+    commandUsage: "!rat role (!rat role2)",
     description: "Become a rat. Use again to no longer be a rat",
     execute(msg, args) {
         // Checks for an existing rat role on the server

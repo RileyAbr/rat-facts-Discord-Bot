@@ -5,6 +5,7 @@ const releaseUrl = require("../../scripts/mostRecentRelease").releaseLink;
 
 module.exports = {
     name: "version",
+    commandUsage: "!rat version",
     description: "Shows the current release of rat facts",
     execute(msg, args) {
         const versionEmbed = new Discord.MessageEmbed()
