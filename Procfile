@@ -1,1 +1,0 @@
-worker: node ./src/rat.js
