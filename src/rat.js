@@ -1,28 +1,28 @@
-const Discord = require("discord.js");
-const fs = require("fs");
-const patchEmbed = require("./scripts/createPatchEmbed").patchEmbed;
+const Discord = require('discord.js');
+const fs = require('fs');
+const patchEmbed = require('./scripts/createPatchEmbed').patchEmbed;
 
 // Holds the super-secret token for the bot in an external .env file
 // Only used for development, in production the BOT_TOKEN is set through the provider
-require("dotenv").config();
+require('dotenv').config();
 
 // The command to summon the bot
-const PREFIX = "!rat";
+const PREFIX = '!rat';
 
 // Create the bot and set up it's commands
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
-const botCommands = require("./commands/index");
+const botCommands = require('./commands/index');
 
 Object.keys(botCommands).map((key) => {
     bot.commands.set(botCommands[key].name, botCommands[key]);
 });
 
 // Executed when the bot first connects to the server
-bot.on("ready", () => {
-    let guildCount = bot.guilds.cache.length;
+bot.on('ready', () => {
+    // let guildCount = bot.guilds.cache.length;
 
-    bot.user.setActivity("!rat help");
+    bot.user.setActivity('!rat help');
     let showHelpActivity = true;
 
     // setInterval(function () {
@@ -34,9 +34,9 @@ bot.on("ready", () => {
 
     const botChannel = bot.channels.cache.find(
         (channel) =>
-            channel.type == "text" &&
-            (channel.name.toLowerCase().includes("bot") ||
-                channel.name.toLowerCase().includes("general"))
+            channel.type == 'text' &&
+            (channel.name.toLowerCase().includes('bot') ||
+                channel.name.toLowerCase().includes('general'))
     );
 
     if (botChannel !== undefined) {
@@ -49,12 +49,12 @@ bot.on("ready", () => {
 });
 
 // Logs when the bot is invited to a new server
-bot.on("guildCreate", (guild) => {
+bot.on('guildCreate', (guild) => {
     console.info(`Added to a new server! ${guild.name}`);
 });
 
 // Handles all commands sent to the bot
-bot.on("message", (msg) => {
+bot.on('message', (msg) => {
     // Ignore message if from self
     if (msg.author.bot) return;
 
@@ -65,21 +65,21 @@ bot.on("message", (msg) => {
     if (firstWord === PREFIX) {
         // Checks whether or not the command request has additional parameters
         // If no command is specified, the default command is a rat fact
-        const command = args.length > 0 ? args.shift().toLowerCase() : "fact";
+        const command = args.length > 0 ? args.shift().toLowerCase() : 'fact';
 
         // See if there is a match in the bot's command list, if not, direct the user toward the help command
         try {
             bot.commands.get(command).execute(msg, args);
         } catch (error) {
-            msg.reply("Need help? Try `!rat help`.");
+            msg.reply('Need help? Try `!rat help`.');
         }
     }
 });
 
-if (process.env.NODE_ENV === "production") {
-    console.info("🚨 Starting Prod");
+if (process.env.NODE_ENV === 'production') {
+    console.info('🚨 Starting Prod');
     bot.login(process.env.BOT_TOKEN);
 } else {
-    console.info("🔧 Starting Dev");
+    console.info('🔧 Starting Dev');
     bot.login(process.env.DEV_BOT_TOKEN);
 }
