@@ -1,5 +1,6 @@
 import { Client } from 'discord.js'
 import * as dotenv from 'dotenv'
+import guildCreate from './listeners/guildCreate'
 import ready from './listeners/ready'
 
 dotenv.config()
@@ -17,3 +18,5 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 ready(client)
+
+guildCreate(client)
