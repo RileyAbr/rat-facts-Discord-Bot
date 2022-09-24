@@ -1,16 +1,19 @@
-import { Client, GatewayIntentBits } from 'discord.js'
+import { Client } from 'discord.js'
 import * as dotenv from 'dotenv'
+import ready from './listeners/ready'
 
 dotenv.config()
 
-const bot = new Client({
-  intents: [GatewayIntentBits.Guilds],
+const client = new Client({
+  intents: [],
 })
 
 if (process.env.NODE_ENV === 'production') {
   console.info('🚨 Starting Prod')
-  bot.login(process.env.BOT_TOKEN)
+  client.login(process.env.BOT_TOKEN)
 } else {
   console.info('🔧 Starting Dev')
-  bot.login(process.env.DEV_BOT_TOKEN)
+  client.login(process.env.DEV_BOT_TOKEN)
 }
+
+ready(client)
