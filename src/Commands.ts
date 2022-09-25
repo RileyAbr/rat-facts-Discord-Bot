@@ -1,4 +1,4 @@
 import { Command } from './Command'
-import { Fact } from './commands/fact'
+import { fact } from './commands/fact'
 
-export const Commands: Command[] = [Fact]
+export const Commands: Command[] = [fact]
