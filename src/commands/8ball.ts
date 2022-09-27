@@ -20,7 +20,8 @@ export const eightBall: Command = {
     },
   ],
   run: async (client: Client, interaction: CommandInteraction) => {
-    const user = interaction.user.username
+    const userID = interaction.user.id
+    const userMention = `<@${userID}>`
     const question = interaction.options.get('question')?.value
 
     let content = ''
@@ -31,7 +32,7 @@ export const eightBall: Command = {
       const isQuestion = question.charAt(question.length - 1) === '?'
 
       content = isQuestion
-        ? `> **${user}:** "${question}"
+        ? `> **${userMention}:** "${question}"
         
         > 🐀🔮 **The o-rat-cle says:** ${
           ratFortunes[Math.floor(Math.random() * ratFortunes.length)]
