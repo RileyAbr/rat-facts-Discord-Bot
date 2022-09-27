@@ -5,6 +5,7 @@ import {
   EmbedBuilder,
 } from 'discord.js'
 import { Command } from '../Command'
+import { embedColor } from '../data/embedVariables'
 
 export const author: Command = {
   name: 'author',
@@ -12,7 +13,7 @@ export const author: Command = {
   type: ApplicationCommandType.ChatInput,
   run: async (client: Client, interaction: CommandInteraction) => {
     const authorEmbed = new EmbedBuilder()
-      .setColor('#66757f')
+      .setColor(embedColor)
       .setTitle('rat facts Discord Bot')
       .setURL('https://github.com/RileyAbr/rat-facts-Discord-Bot')
       .setDescription('Created by Riley Abrahamson.')
