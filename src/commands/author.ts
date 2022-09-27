@@ -5,7 +5,7 @@ import {
   EmbedBuilder,
 } from 'discord.js'
 import { Command } from '../Command'
-import { embedColor } from '../data/embedVariables'
+import { embedColor, embedThumbnail } from '../data/embedVariables'
 
 export const author: Command = {
   name: 'author',
@@ -17,9 +17,7 @@ export const author: Command = {
       .setTitle('rat facts Discord Bot')
       .setURL('https://github.com/RileyAbr/rat-facts-Discord-Bot')
       .setDescription('Created by Riley Abrahamson.')
-      .setThumbnail(
-        'https://raw.githubusercontent.com/RileyAbr/rat-facts-Discord-Bot/master/rat_logo.png',
-      )
+      .setThumbnail(embedThumbnail)
       .addFields({
         name: "Riley's Website",
         value: 'www.rileyabrahamson.com',
