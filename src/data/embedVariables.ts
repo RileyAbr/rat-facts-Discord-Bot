@@ -1,1 +1,12 @@
+import { EmbedFooterOptions } from 'discord.js'
+
 export const embedColor = '#66757f'
+
+export const embedThumbnail =
+  'https://raw.githubusercontent.com/RileyAbr/rat-facts-Discord-Bot/master/rat_logo.png'
+
+export const embedAttributionFooter: EmbedFooterOptions = {
+  text: 'rat facts created by Riley Abrahamson',
+  iconURL:
+    'https://avatars3.githubusercontent.com/u/32375220?s=460&u=a375968682555bb66226556bf7ee33d6d35b7961&v=4',
+}
