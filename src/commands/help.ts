@@ -16,6 +16,7 @@ import { donate } from './donate'
 import { fact } from './fact'
 import { joke } from './joke'
 import { pic } from './pic'
+import { quiz } from './quiz'
 
 const donateLink = 'https://ko-fi.com/rileyabrahamson'
 
@@ -48,10 +49,10 @@ export const help: Command = {
           name: '/' + eightBall.name + ' [question]',
           value: eightBall.description,
         },
-        // {
-        //   name: quiz.name,
-        //   value: quiz.description,
-        // },
+        {
+          name: '/' + quiz.name,
+          value: quiz.description,
+        },
         // {
         //   name: role.name,
         //   value: role.description,

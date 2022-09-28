@@ -1,4 +1,4 @@
-import { Client } from 'discord.js'
+import { Client, GatewayIntentBits } from 'discord.js'
 import * as dotenv from 'dotenv'
 import guildCreate from './listeners/guildCreate'
 import interactionCreate from './listeners/interactionCreate'
@@ -7,7 +7,11 @@ import ready from './listeners/ready'
 dotenv.config()
 
 const client = new Client({
-  intents: [],
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildMessageReactions,
+  ],
 })
 
 if (process.env.NODE_ENV === 'production') {
