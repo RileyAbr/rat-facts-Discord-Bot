@@ -15,6 +15,7 @@ import { author } from './author'
 import { donate } from './donate'
 import { fact } from './fact'
 import { joke } from './joke'
+import { patch } from './patch'
 import { pic } from './pic'
 import { quiz } from './quiz'
 
@@ -66,13 +67,18 @@ export const help: Command = {
           value: author.description,
         },
         {
-          name: '/' + helpName,
-          value: helpDescription,
-        },
-        {
           name: '/' + donate.name,
           value: donate.description,
         },
+        {
+          name: '/' + patch.name,
+          value: patch.description,
+        },
+        {
+          name: '/' + helpName,
+          value: helpDescription,
+        },
+
         // {
         //   name: misc.name,
         //   value: misc.description,
