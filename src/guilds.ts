@@ -11,30 +11,29 @@ const client = new Client({
   ],
 })
 
-type CountableGuilds = {
+type CountableGuild = {
   name: string
   members: number
   dateAdded: string
 }
 
 client.on('ready', async () => {
-  let guildTracker: CountableGuilds[] = []
   let guildCount = 0
 
-  for (const guildData of client.guilds.cache) {
-    const guild = guildData[1]
+  const guildTracker: CountableGuild[] = await Promise.all(
+    client.guilds.cache.map(async guild => {
+      guildCount++
 
-    guildCount++
+      const ratFactsBot = await guild.members.fetchMe()
+      const ratFactsAddDate = await ratFactsBot.joinedAt
 
-    const ratFactsBot = await guild.members.fetchMe()
-    const ratFactsAddDate = await ratFactsBot.joinedAt
-
-    guildTracker.push({
-      name: guild.name,
-      members: guild.memberCount,
-      dateAdded: ratFactsAddDate?.toLocaleDateString() || '01-01-1970',
-    })
-  }
+      return {
+        name: guild.name,
+        members: guild.memberCount,
+        dateAdded: ratFactsAddDate?.toLocaleDateString() || '01-01-1970',
+      }
+    }),
+  )
 
   // By Add Date
   guildTracker.sort(
@@ -45,16 +44,18 @@ client.on('ready', async () => {
   //   guildTracker.sort((a, b) => b.members - a.members)
 
   console.table(guildTracker)
-  console.info(`I am currently in-use in ${guildCount} servers!`)
+  console.info(`rat facts is in-use in ${guildCount} servers!`)
   console.info(
     `The largest server has ${Math.max(
       ...guildTracker.map(guild => guild.members),
-    )}`,
+    )} members`,
   )
   console.info(
-    `The oldest rat facts bot was added in ${Math.min(
-      ...guildTracker.map(guild => new Date(guild.dateAdded).getTime()),
-    )}`,
+    `The oldest rat facts bot was added on ${new Date(
+      Math.min(
+        ...guildTracker.map(guild => new Date(guild.dateAdded).getTime()),
+      ),
+    ).toLocaleDateString()}`,
   )
 
   process.exit(1)
