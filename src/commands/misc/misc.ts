@@ -12,6 +12,7 @@ import {
   embedThumbnail,
 } from '../../data/embedVariables'
 import { anthem } from './anthem'
+import { great } from './great'
 import { intimidate } from './intimidate'
 import { ratATatTat } from './ratATatTat'
 
@@ -36,6 +37,11 @@ export const misc: Command = {
       type: ApplicationCommandOptionType.Subcommand,
     },
     {
+      name: great.name,
+      description: great.description,
+      type: ApplicationCommandOptionType.Subcommand,
+    },
+    {
       name: 'help',
       description: 'Lists all of the misc commands available to rat facts',
       type: ApplicationCommandOptionType.Subcommand,
@@ -53,6 +59,9 @@ export const misc: Command = {
         break
       case ratATatTat.name:
         ratATatTat.run(client, interaction)
+        break
+      case great.name:
+        great.run(client, interaction)
         break
       case 'help':
       default:
