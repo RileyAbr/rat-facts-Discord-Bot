@@ -46,6 +46,16 @@ client.on('ready', async () => {
 
   console.table(guildTracker)
   console.info(`I am currently in-use in ${guildCount} servers!`)
+  console.info(
+    `The largest server has ${Math.max(
+      ...guildTracker.map(guild => guild.members),
+    )}`,
+  )
+  console.info(
+    `The oldest rat facts bot was added in ${Math.min(
+      ...guildTracker.map(guild => new Date(guild.dateAdded).getTime()),
+    )}`,
+  )
 
   process.exit(1)
 })
