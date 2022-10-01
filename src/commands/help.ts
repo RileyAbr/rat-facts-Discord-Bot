@@ -16,6 +16,7 @@ import { donate } from './donate'
 import { fact } from './fact'
 import { joke } from './joke'
 import { lore } from './lore'
+import { misc } from './misc/misc'
 import { patch } from './patch'
 import { pic } from './pic'
 import { quiz } from './quiz'
@@ -79,11 +80,10 @@ export const help: Command = {
           name: '/' + helpName,
           value: helpDescription,
         },
-
-        // {
-        //   name: misc.name,
-        //   value: misc.description,
-        // },
+        {
+          name: '/' + misc.name,
+          value: misc.description,
+        },
       )
       .setFooter(embedAttributionFooter)
 
