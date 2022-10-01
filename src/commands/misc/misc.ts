@@ -12,13 +12,19 @@ import {
   embedThumbnail,
 } from '../../data/embedVariables'
 import { anthem } from './anthem'
-import { ratATatTat } from './attattat'
+import { intimidate } from './intimidate'
+import { ratATatTat } from './ratATatTat'
 
 export const misc: Command = {
   name: 'misc',
   description: 'List small, one-off commands',
   type: ApplicationCommandType.ChatInput,
   options: [
+    {
+      name: intimidate.name,
+      description: intimidate.description,
+      type: ApplicationCommandOptionType.Subcommand,
+    },
     {
       name: anthem.name,
       description: anthem.description,
@@ -39,6 +45,9 @@ export const misc: Command = {
     const subCommand = interaction.options.data[0].name
 
     switch (subCommand) {
+      case intimidate.name:
+        intimidate.run(client, interaction)
+        break
       case anthem.name:
         anthem.run(client, interaction)
         break
