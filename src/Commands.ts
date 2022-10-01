@@ -5,6 +5,7 @@ import { donate } from './commands/donate'
 import { fact } from './commands/fact'
 import { help } from './commands/help'
 import { joke } from './commands/joke'
+import { lore } from './commands/lore'
 import { patch } from './commands/patch'
 import { pic } from './commands/pic'
 import { quiz } from './commands/quiz'
@@ -15,6 +16,7 @@ export const Commands: Command[] = [
   joke,
   eightBall,
   quiz,
+  lore,
   author,
   help,
   patch,

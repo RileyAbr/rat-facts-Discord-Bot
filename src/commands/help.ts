@@ -15,6 +15,7 @@ import { author } from './author'
 import { donate } from './donate'
 import { fact } from './fact'
 import { joke } from './joke'
+import { lore } from './lore'
 import { patch } from './patch'
 import { pic } from './pic'
 import { quiz } from './quiz'
@@ -58,10 +59,10 @@ export const help: Command = {
         //   name: role.name,
         //   value: role.description,
         // },
-        // {
-        //   name: lore.name,
-        //   value: lore.description,
-        // },
+        {
+          name: '/' + lore.name,
+          value: lore.description,
+        },
         {
           name: '/' + author.name,
           value: author.description,
