@@ -51,6 +51,12 @@ client.on('ready', async () => {
     )} members`,
   )
   console.info(
+    `${guildTracker.reduce(
+      (partialSum, guild) => partialSum + guild.members,
+      0,
+    )} total members are served by rat facts`,
+  )
+  console.info(
     `The oldest rat facts bot was added on ${new Date(
       Math.min(
         ...guildTracker.map(guild => new Date(guild.dateAdded).getTime()),
