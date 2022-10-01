@@ -7,7 +7,7 @@
     "start": "env NODE_ENV=production ts-node ./src/rat.ts",
     "dev": "nodemon ./src/rat.ts",
     "dev:old": "nodemon ./src/rat.js",
-    "guilds": "node ./src/guilds.js"
+    "guilds": "env NODE_ENV=production ts-node ./src/guilds.ts"
   },
   "repository": {
     "type": "git",
