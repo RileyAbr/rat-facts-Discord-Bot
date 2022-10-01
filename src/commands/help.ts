@@ -20,8 +20,7 @@ import { patch } from './patch'
 import { pic } from './pic'
 import { quiz } from './quiz'
 import { role } from './role'
-
-const donateLink = 'https://ko-fi.com/rileyabrahamson'
+import { role2 } from './role2'
 
 const helpName = 'help'
 const helpDescription = 'Lists all of the commands available to rat facts'
@@ -57,7 +56,7 @@ export const help: Command = {
           value: quiz.description,
         },
         {
-          name: '/' + role.name,
+          name: `/${role.name} (/${role2.name})`,
           value: role.description,
         },
         {
