@@ -19,6 +19,7 @@ import { lore } from './lore'
 import { patch } from './patch'
 import { pic } from './pic'
 import { quiz } from './quiz'
+import { role } from './role'
 
 const donateLink = 'https://ko-fi.com/rileyabrahamson'
 
@@ -32,7 +33,7 @@ export const help: Command = {
   run: async (client: Client, interaction: CommandInteraction) => {
     const helpEmbed = new EmbedBuilder()
       .setColor(embedColor)
-      .setTitle('`rat facts` / commands')
+      .setTitle('`rat facts` commands')
       .setThumbnail(embedThumbnail)
       .addFields(
         {
@@ -55,10 +56,10 @@ export const help: Command = {
           name: '/' + quiz.name,
           value: quiz.description,
         },
-        // {
-        //   name: role.name,
-        //   value: role.description,
-        // },
+        {
+          name: '/' + role.name,
+          value: role.description,
+        },
         {
           name: '/' + lore.name,
           value: lore.description,

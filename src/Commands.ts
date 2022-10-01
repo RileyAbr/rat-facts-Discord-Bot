@@ -9,6 +9,7 @@ import { lore } from './commands/lore'
 import { patch } from './commands/patch'
 import { pic } from './commands/pic'
 import { quiz } from './commands/quiz'
+import { role } from './commands/role'
 
 export const Commands: Command[] = [
   fact,
@@ -16,6 +17,7 @@ export const Commands: Command[] = [
   joke,
   eightBall,
   quiz,
+  role,
   lore,
   author,
   help,
