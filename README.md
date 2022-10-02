@@ -38,7 +38,7 @@ All commands are evoked as slash commands! Type `/` and select a command from be
 
 ## Technical Details
 
-Rat facts is built as a [Node.js](https://nodejs.org/en/) project. Additionally, it is written in [TypeScript](https://www.typescriptlang.org/) alongside other developer conviences like [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) The bot relies heavily on the [Discord.js](https://discord.js.org/#/) module to make working with Discord's API much easier. Much of the information used for the various commands are stored in local JSON files, making them easy to expand with additional facts, jokes, or photos. The bot is hosted on a [PebbleHost](https://pebblehost.com/bot-hosting) instance using their Bot Hosting service.
+Rat facts is built as a [Node.js](https://nodejs.org/en/) project. Additionally, it is written in [TypeScript](https://www.typescriptlang.org/) alongside other developer conveniences like [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) The bot relies heavily on the [Discord.js](https://discord.js.org/#/) module to make working with Discord's API much easier. Much of the information used for the various commands are stored in local JSON files, making them easy to expand with additional facts, jokes, or photos. The bot is hosted on a [PebbleHost](https://pebblehost.com/bot-hosting) instance using their Bot Hosting service.
 
 ### Expanding the Bot
 
