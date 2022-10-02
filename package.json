@@ -1,29 +1,39 @@
 {
-    "name": "rat-facts",
-    "version": "6.0.0",
-    "description": "A Discord bot that delivers rat content.",
-    "main": "rat.js",
-    "scripts": {
-        "start": "env NODE_ENV=production node ./src/rat.js",
-        "dev": "nodemon ./src/rat.js",
-        "guilds": "node ./src/guilds.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/RileyAbr/rat-facts-Discord-Bot.git"
-    },
-    "author": "Riley Abrahamson",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/RileyAbr/rat-facts-Discord-Bot/issues"
-    },
-    "homepage": "https://github.com/RileyAbr/rat-facts-Discord-Bot#readme",
-    "dependencies": {
-        "discord.js": "^12.2.0",
-        "dotenv": "^8.2.0",
-        "express": "^4.17.1"
-    },
-    "devDependencies": {
-        "nodemon": "^2.0.13"
-    }
+  "name": "rat-facts",
+  "version": "7.0.0",
+  "description": "A Discord bot that delivers rat content.",
+  "main": "rat.js",
+  "scripts": {
+    "start": "env NODE_ENV=production ts-node ./src/rat.ts",
+    "dev": "nodemon ./src/rat.ts",
+    "dev:old": "nodemon ./src/rat.js",
+    "guilds": "env NODE_ENV=production ts-node ./src/guilds.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RileyAbr/rat-facts-Discord-Bot.git"
+  },
+  "author": "Riley Abrahamson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RileyAbr/rat-facts-Discord-Bot/issues"
+  },
+  "homepage": "https://github.com/RileyAbr/rat-facts-Discord-Bot#readme",
+  "dependencies": {
+    "discord.js": "^14.3.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.14",
+    "eslint": "^8.23.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.5",
+    "eslint-plugin-promise": "^6.0.1",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.2"
+  }
 }
