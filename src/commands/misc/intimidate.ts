@@ -16,7 +16,7 @@ export const intimidate: Command = {
       .setColor(embedColor)
       .setTitle('Reconsider.')
       .setImage(
-        'https://raw.githubusercontent.com/RileyAbr/rat-facts-Discord-Bot/master/assets/rat_pics/rat_intimidate.jpeg',
+        'https://raw.githubusercontent.com/RileyAbr/rat-facts-Discord-Bot/main/assets/rat_pics/rat_intimidate.jpeg',
       )
 
     await interaction

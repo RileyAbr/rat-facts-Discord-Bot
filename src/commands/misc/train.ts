@@ -16,7 +16,7 @@ export const train: Command = {
       .setColor(embedColor)
       .setTitle('All board! 🚂🐀🐀🐀')
       .setImage(
-        'https://raw.githubusercontent.com/RileyAbr/rat-facts-Discord-Bot/master/assets/rat_pics/rat_train.gif',
+        'https://raw.githubusercontent.com/RileyAbr/rat-facts-Discord-Bot/main/assets/rat_pics/rat_train.gif',
       )
       .setFooter({
         text: 'Credit to the Jerma985 Discord server for the emote',

@@ -4,7 +4,7 @@
 
 Rat facts is a Discord bot that delivers rat-based content.
 
-![GIF showing off the rat facts bot in action](https://raw.githubusercontent.com/RileyAbr/rat-facts-Discord-Bot/master/assets/rat%20facts%20clip.gif)
+![GIF showing off the rat facts bot in action](https://raw.githubusercontent.com/RileyAbr/rat-facts-Discord-Bot/main/assets/rat%20facts%20clip.gif)
 
 ## Features
 

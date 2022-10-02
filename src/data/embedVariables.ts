@@ -3,7 +3,7 @@ import { EmbedFooterOptions } from 'discord.js'
 export const embedColor = '#66757f'
 
 export const embedThumbnail =
-  'https://raw.githubusercontent.com/RileyAbr/rat-facts-Discord-Bot/master/rat_logo.png'
+  'https://raw.githubusercontent.com/RileyAbr/rat-facts-Discord-Bot/main/rat_logo.png'
 
 export const embedAttributionFooter: EmbedFooterOptions = {
   text: 'rat facts created by Riley Abrahamson',
