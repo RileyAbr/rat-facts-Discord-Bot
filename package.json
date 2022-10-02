@@ -4,6 +4,7 @@
   "description": "A Discord bot that delivers rat content.",
   "main": "rat.js",
   "scripts": {
+    "build": "tsc --build",
     "start": "env NODE_ENV=production ts-node ./src/rat.ts",
     "dev": "nodemon ./src/rat.ts",
     "guilds": "env NODE_ENV=production ts-node ./src/guilds.ts"

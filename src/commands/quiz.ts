@@ -47,9 +47,16 @@ export const quiz: Command = {
 
     await interaction
       .followUp({ embeds: [quizEmbed] })
-      .then(message => {
-        message.react('✅')
-        message.react('❎')
+      .then(async message => {
+        await message.react('✅').catch(error => {
+          interaction.followUp(
+            `Sorry! \`rat facts\` does not have reaction permissions`,
+          )
+          console.error(`ERROR: ${error}`)
+        })
+        await message.react('❎').catch(error => {
+          console.error(`ERROR: ${error}`)
+        })
         const collector = message.createReactionCollector({
           filter: filter,
           max: 1,
