@@ -18,25 +18,27 @@ Rat facts is a Discord bot that delivers rat-based content.
 
 ### Available Commands:
 
-All commands are evoked with `!rat`.
+All commands are evoked as slash commands! Type `/` and select a command from below:
 
--   `!rat fact (!rat)`
--   `!rat pic`
--   `!rat joke`
--   `!rat 8ball {question}`
--   `!rat quiz`
--   `!rat role`
--   `!rat lore`
--   `!rat help`
--   `!rat misc`
+-   `/fact`
+-   `/pic`
+-   `/joke`
+-   `/8ball {question}`
+-   `/quiz`
+-   `/role`
+-   `/lore`
+-   `/help`
+-   `/misc`
 
 ## Adding rat facts to a server
 
-[Click here to invite rat facts to your server](https://discord.com/api/oauth2/authorize?client_id=717512371312132188&permissions=130048&scope=bot)
+[Click here to invite rat facts to your server](https://discord.com/api/oauth2/authorize?client_id=717512371312132188&permissions=2416299072&scope=bot%20applications.commands)
+
+[Check it out on Top.gg!](https://top.gg/bot/717512371312132188)
 
 ## Technical Details
 
-Rat facts is built as a Node.js project. It relies heavily on the [Discord.js](https://discord.js.org/#/) module to make working with Discord's API much easier. Much of the information used for the various commands are stored in local JSON files, making them easy to expand with additional facts, jokes, or photos. The bot is hosted on a Heroku instance with a single worker Dyno calling the node project to start.
+Rat facts is built as a [Node.js](https://nodejs.org/en/) project. Additionally, it is written in [TypeScript](https://www.typescriptlang.org/) alongside other developer conviences like [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) The bot relies heavily on the [Discord.js](https://discord.js.org/#/) module to make working with Discord's API much easier. Much of the information used for the various commands are stored in local JSON files, making them easy to expand with additional facts, jokes, or photos. The bot is hosted on a [PebbleHost](https://pebblehost.com/bot-hosting) instance using their Bot Hosting service.
 
 ### Expanding the Bot
 
