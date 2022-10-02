@@ -6,7 +6,6 @@
   "scripts": {
     "start": "env NODE_ENV=production ts-node ./src/rat.ts",
     "dev": "nodemon ./src/rat.ts",
-    "dev:old": "nodemon ./src/rat.js",
     "guilds": "env NODE_ENV=production ts-node ./src/guilds.ts"
   },
   "repository": {
