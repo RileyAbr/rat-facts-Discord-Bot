@@ -16,6 +16,7 @@ import { great } from './great'
 import { intimidate } from './intimidate'
 import { ratATatTat } from './ratATatTat'
 import { train } from './train'
+import { version } from './version'
 
 export const misc: Command = {
   name: 'misc',
@@ -48,6 +49,11 @@ export const misc: Command = {
       type: ApplicationCommandOptionType.Subcommand,
     },
     {
+      name: version.name,
+      description: version.description,
+      type: ApplicationCommandOptionType.Subcommand,
+    },
+    {
       name: 'help',
       description: 'Lists all of the misc commands available to rat facts',
       type: ApplicationCommandOptionType.Subcommand,
@@ -71,6 +77,9 @@ export const misc: Command = {
         break
       case train.name:
         train.run(client, interaction)
+        break
+      case version.name:
+        version.run(client, interaction)
         break
       case 'help':
       default:
