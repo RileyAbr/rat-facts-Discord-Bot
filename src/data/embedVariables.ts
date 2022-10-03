@@ -11,6 +11,6 @@ export const embedAttributionFooter: EmbedFooterOptions = {
     'https://avatars3.githubusercontent.com/u/32375220?s=460&u=a375968682555bb66226556bf7ee33d6d35b7961&v=4',
 }
 
-export const version = require('../../package.json').version
+export const version = require('../package.json').version
 export const repoUrl = 'https://github.com/RileyAbr/rat-facts-Discord-Bot/'
 export const releaseLink = `${repoUrl}releases/tag/v${version}`
