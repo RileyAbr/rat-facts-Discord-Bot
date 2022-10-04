@@ -9,7 +9,7 @@ export default (client: Client): void => {
 
     await client.application.commands.set(Commands)
 
-    client.user.setActivity('!rat help')
+    client.user.setActivity('v7.0.0!')
 
     console.info(`Logged in as ${client.user.tag}`)
   })
