@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "commonjs",
-    "rootDir": "./src/",
+    "rootDir": ".",
     "outDir": "./dist/",
     "strict": true,
     "moduleResolution": "node",
@@ -18,7 +18,7 @@
     "sourceMap": false,
     "baseUrl": "./"
   },
-  "files": ["src/rat.ts", "src/guilds.ts"],
+  "files": ["./src/rat.ts", "./src/guilds.ts", "package.json"],
   "include": ["./**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
