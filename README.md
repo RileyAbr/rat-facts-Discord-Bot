@@ -34,6 +34,8 @@ All commands are evoked as slash commands! Type `/` and select a command from be
 
 [Click here to invite rat facts to your server](https://discord.com/api/oauth2/authorize?client_id=717512371312132188&permissions=2416299072&scope=bot%20applications.commands)
 
+Find us in the in-app Discord App Directory!
+
 [Check it out on Top.gg!](https://top.gg/bot/717512371312132188)
 
 ## Technical Details
