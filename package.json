@@ -1,6 +1,6 @@
 {
   "name": "rat-facts",
-  "version": "7.0.1",
+  "version": "7.1.1",
   "description": "A Discord bot that delivers rat content.",
   "main": "rat.js",
   "scripts": {
